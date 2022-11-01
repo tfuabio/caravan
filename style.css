@@ -228,3 +228,71 @@ footer {
   color: #fff;
 }
 
+
+/*スマートフォン用レスポンシブ対応*/
+@media screen and (max-width:425px) {
+  /*横幅いっぱいにする*/
+  header, nav-list, nav-list-item, main, .blog, .sidebar, .main-visual-content {
+    width: 100%;
+  }
+
+  /*非表示*/
+  .social, .category {
+    display: none;
+  }
+
+  /*nav-list-itemを縦並びにする*/
+  .nav-list-item {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  /*flexbox解除して本文とサイドバーを縦並びにする*/
+  main {
+    display: block;
+  }
+
+  /*blogのマージン解除*/
+  .blog {
+    margin: 0px;
+  }
+
+  /*blog-boxの横スペースを空ける*/
+  .blog-box {
+    padding-left: 2%;
+    padding-right: 2%;
+  }
+
+  /*ブログ画像を半分くらいに*/
+  .blog-image {
+    width: 49%;
+  }
+
+  /*ブログ記事も半分くらいに*/
+  .blog-text {
+    width: 49%;
+    padding-top: 5px; /*ブログ記事の上のスペースを調整*/
+  }
+
+  /*pagination下にスペース空ける*/
+  .pagination {
+    margin-bottom: 50px;
+  }
+
+  /*sidebar-contentsの横にスペース入れる*/
+  .sidebar-contents {
+    padding-left: 3%;
+    padding-right: 3%;
+  }
+
+  /*instagram-boxを１行に２つずつ表示するよう調整*/
+  .instagram-box {
+    width: 48%;
+    padding-top: 48%;
+  }
+
+  /*間のスペース（奇数番目のinstagram-boxの右マージン）を調整*/
+  .instagram-box:nth-child(odd) {
+    margin-right: 4%;
+  }
+}
